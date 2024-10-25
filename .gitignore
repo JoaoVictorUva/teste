@@ -1,3 +1,4 @@
+#arquivos e pasta para nao enviar para o github
 
 # Dependências do Composer
 /vendor/
