@@ -1,0 +1,40 @@
+#arquivos e pasta para nao enviar para o github
+
+# Dependências do Composer
+/vendor/
+
+# Dependências do Node
+/node_modules/
+
+# Arquivos de ambiente
+.env
+.env.backup
+.env
+
+# Arquivos de cache e log
+/storage/*.key
+/storage/logs/*
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/views/*
+/storage/app/public
+
+# Cache da aplicação
+/bootstrap/cache/*
+
+# IDEs e Ferramentas de Desenvolvimento (opcional)
+.vscode/
+.idea/
+
+# Arquivos de migração do banco de dados
+/database/*.sqlite
+
+# Configuração do sistema operacional e arquivos temporários
+*.DS_Store
+*.log
+*.swp
+*.tmp
+*.bak
+
+# Testes (pode ignorar se não está em uso)
+phpunit.xml

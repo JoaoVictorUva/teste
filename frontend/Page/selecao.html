@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Seleção</title>
+    <link rel="stylesheet" href="../assets/css/cadastro.css">
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h1>Cadastrar Seleção</h1>
+
+        <form id="form-selecao" enctype="multipart/form-data">
+            <!-- Título -->
+            <div class="form-group">
+                <label for="titulo">Título:</label>
+                <input type="text" id="titulo" name="titulo" required>
+            </div>
+
+            <!-- Edital (PDF) -->
+            <div class="form-group">
+                <label for="edital">Edital (PDF):</label>
+                <input type="file" id="edital" name="edital" accept=".pdf" required>
+            </div>
+
+            <!-- Informações Gerais -->
+            <div class="form-group">
+                <label for="informacoes_gerais">Informações Gerais:</label>
+                <textarea id="informacoes_gerais" name="informacoes_gerais" required></textarea>
+            </div>
+
+            <!-- Datas de Inscrição -->
+            <div class="form-group">
+                <label for="inscricao_inicio">Início da Inscrição:</label>
+                <input type="date" id="inscricao_inicio" name="inscricao_inicio" required>
+            </div>
+
+            <div class="form-group">
+                <label for="inscricao_fim">Fim da Inscrição:</label>
+                <input type="date" id="inscricao_fim" name="inscricao_fim" required>
+            </div>
+
+            <!-- Exibir Edital -->
+            <div class="form-group">
+                <label for="exibir_edital">Exibir Edital:</label>
+                <input type="checkbox" id="exibir_edital" name="exibir_edital" value="1">
+            </div>
+
+            <!-- Exibir Resultado -->
+            <div class="form-group">
+                <label for="exibir_resultado_inscricao">Exibir Resultado da Inscrição:</label>
+                <input type="checkbox" id="exibir_resultado_inscricao" name="exibir_resultado_inscricao" value="1">
+            </div>
+
+            <!-- Finalizado -->
+            <div class="form-group">
+                <label for="finalizado">Finalizado:</label>
+                <input type="checkbox" id="finalizado" name="finalizado" value="1">
+            </div>
+
+            <!-- Resultado -->
+            <div class="form-group">
+                <label for="resultado">Resultado:</label>
+                <textarea id="resultado" name="resultado" required></textarea>
+            </div>
+
+            <!-- Botão de Enviar -->
+            <div class="form-group">
+                <button type="submit">Cadastrar</button>
+            </div>
+        </form>
+
+
+    </div>
+
+
+</body>
+
+<!--link axios -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<script src="../scripts/Selecao/AddSelecao.js"></script>
+
+</html>

@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.4.14"
+  },
+  "scripts": {
+    "build:css": "npx tailwindcss -i ./assets/css/Tallwind/input.css -o ./assets/css/Tallwind/output.css --watch"
+  },
+  "dependencies": {
+    "axios": "^1.7.7"
+  }
+}

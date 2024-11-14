@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100lvh;
+    overflow: hidden;
+}
+
+.oi {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    background-color: #00000036;
+    text-align: center;
+    margin: 8px 17px 8px 17px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.links {
+    width: 97.1vw;
+    height: calc(100% - 90px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    margin: 8px 17px 8px 17px;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+td,
+th {
+    text-align: center;
+    padding: 10px;
+}
+
+
+.candidatos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.excluir {
+    background-color: #b60f0f;
+    border: none;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.edit {
+    background-color: #36d143;
+    border: none;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+/* Estilos do modal */
+#editModal {
+    display: none;
+    /* Escondido por padrão */
+    position: fixed;
+    /* Fica na tela */
+    z-index: 1000;
+    /* Fica em cima de outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Largura total */
+    height: 100%;
+    /* Altura total */
+    overflow: none;
+    /* Habilita o scroll se necessário */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fundo escuro com opacidade */
+}
+
+/* Estilos do conteúdo do modal */
+.modal-content {
+    background-color: #fff;
+    /* Fundo branco */
+    margin: 15% auto;
+    /* Centralizado com margens */
+    padding: 20px;
+    /* Espaçamento interno */
+    border: 1px solid #888;
+    /* Borda cinza */
+    width: 80%;
+    /* Largura do modal */
+    max-width: 600px;
+    /* Largura máxima */
+    border-radius: 8px;
+    /* Bordas arredondadas */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    /* Sombra para efeito de profundidade */
+}
+
+/* Estilos para o título do modal */
+.modal-content h2 {
+    margin-top: 0;
+    /* Remove margem superior */
+}
+
+/* Estilos para inputs e selects */
+.modal-content input[type="text"],
+.modal-content select {
+    width: 100%;
+    /* Largura total */
+    padding: 10px;
+    /* Espaçamento interno */
+    margin: 10px 0;
+    /* Margens superior e inferior */
+    border: 1px solid #ccc;
+    /* Borda cinza clara */
+    border-radius: 4px;
+    /* Bordas arredondadas */
+}
+
+/* Estilos para os botões */
+.modal-content button {
+    background-color: #4CAF50;
+    /* Cor de fundo verde */
+    color: white;
+    /* Texto branco */
+    padding: 10px 15px;
+    /* Espaçamento interno */
+    border: none;
+    /* Sem borda */
+    border-radius: 4px;
+    /* Bordas arredondadas */
+    cursor: pointer;
+    /* Mão ao passar o mouse */
+    margin-right: 10px;
+    /* Margem à direita */
+}
+
+.modal-content button:hover {
+    background-color: #45a049;
+    /* Escurece ao passar o mouse */
+}
+
+/* Estilo para o botão de fechar */
+.close {
+    color: #aaa;
+    /* Cor cinza clara */
+    float: right;
+    /* Alinha à direita */
+    font-size: 28px;
+    /* Tamanho da fonte */
+    font-weight: bold;
+    /* Negrito */
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    /* Cor ao passar o mouse */
+    text-decoration: none;
+    /* Sem sublinhado */
+    cursor: pointer;
+    /* Mão ao passar o mouse */
+}
