@@ -74,7 +74,8 @@ class SelecaoController extends Controller
     }
 
     public function update(Request $request, $id)
-    {
+    {   
+        //dd($request->all());
         $selecao = Selecao::where('selecao_id', $id)->firstOrFail();
 
         $selecao->titulo = $request->titulo; 

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 50px;
+        }
+
+        .form-group {
+            margin: 10px 0 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form id="form-selecao-editar">
+        <label for="editTitulo">Título:</label>
+        <input type="text" id="editTitulo" name="editTitulo" required>
+
+        <input type="hidden" id="editSelecaoId" name="editSelecaoId" required>
+
+        <label for="informacoes_gerais">Informações Gerais:</label>
+        <textarea id="editInformacoes_gerais" name="editInformacoes_gerais" required></textarea>
+
+        <label for="inscricao_inicio">Início da Inscrição:</label>
+        <input type="date" id="editInscricao_inicio" name="editInscricao_inicio" required>
+
+        <label for="inscricao_fim">Fim da Inscrição:</label>
+        <input type="date" id="editInscricao_fim" name="editInscricao_fim" required>
+
+        <label for="exibir_edital">Exibir Edital:</label>
+        <input type="checkbox" id="editExibir_edital" name="editExibir_edital">
+
+        <label for="exibir_resultado_inscricao">Exibir Resultado da Inscrição:</label>
+        <input type="checkbox" id="editExibir_resultado_inscricao" name="editExibir_resultado_inscricao">
+
+        <label for="finalizado">Finalizado:</label>
+        <input type="checkbox" id="editFinalizado" name="editFinalizado">
+
+        <label for="resultado">Resultado:</label>
+        <input type="text" id="editResultado" name="editResultado">
+
+        <label for="edital">Editar Edital (arquivo PDF):</label>
+        <input type="file" id="editEdital" name="editEdital" accept=".pdf">
+
+        <button type="submit">Atualizar Seleção</button>
+
+    </form>
+    <button onclick="fecharModal()">Cancelar</button>
+
+</body>
+<!--link axios -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<script src="../../scripts/Selecao/edit.js"></script>
+
+</html>

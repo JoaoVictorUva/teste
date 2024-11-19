@@ -18,7 +18,7 @@ Route::get('/selecao', [SelecaoController::class, 'index']);
 Route::post('/selecao/store', [SelecaoController::class, 'store']);
 Route::delete('/selecao/destroy/{id}', [SelecaoController::class, 'destroy']);
 Route::get('/selecao/{id}', [SelecaoController::class, 'show']);
-Route::put('/selecao/update/{id}', [SelecaoController::class, 'update']);
+Route::post('/selecao/update/{id}', [SelecaoController::class, 'update']);
 
 
 Route::get('/vaga', [VagaController::class, 'index']);
