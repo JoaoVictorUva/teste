@@ -18,31 +18,33 @@ class CandidatoController extends Controller
    
     public function store(Request $request)
     {
+        
+
         // Validação dos dados recebidos
         $validacao = $request->validate([
-            'id_raca' => 'required',
-            'id_estado_civil' => 'required',
-            'id_cidade' => 'required',
-            'id_nascimento_pais' => 'required',
-            'id_estado_nascimento' => 'required',
-            'id_nascimento_cidade' => 'required',
+            'id_raca' => 'required|integer',
+            'id_estado_civil' => 'required|integer',
+            'id_cidade' => 'required|integer',
+            'id_nascimento_pais' => 'required|integer',
+            'id_estado_nascimento' => 'required|integer',
+            'id_nascimento_cidade' => 'required|integer',
             'nome_completo' => 'required|string|max:255',  
             'sexo' => 'required|in:M,F',  
             'deficiencia' => 'required|boolean',  
             'nome_pai' => 'nullable|string|max:255',  
             'nome_mae' => 'nullable|string|max:255',  
-            'endereco' => 'nullable|string|max:255',  
-            'bairro' => 'nullable|string|max:255',  
-            'cep' => 'nullable|string|max:10',  
-            'telefone' => 'nullable|string|max:15',  
-            'email' => 'nullable|email|max:255',  
-            'nacionalidade' => 'nullable|string|max:100',  
-            'cpf' => 'nullable|string|max:14',  
-            'rg' => 'nullable|string|max:20',  
-            'data_expedicao' => 'nullable|date',  
-            'orgao_expeditor' => 'nullable|string|max:100',  
-            'uf_expedicao' => 'nullable|string|max:2',  
-            'escolaridade' => 'nullable|string|max:100',  
+            'endereco' => 'required|string|max:255',  
+            'bairro' => 'required|string|max:255',  
+            'cep' => 'required|integer',  
+            'telefone' => 'required|integer',  
+            'email' => 'required|email|max:255',  
+            'nacionalidade' => 'required|string|max:100',  
+            'cpf' => 'required|integer',  
+            'rg' => 'required|integer',  
+            'data_expedicao' => 'required|date',  
+            'orgao_expeditor' => 'required|string|max:100',  
+            'uf_expedicao' => 'required|string|max:2',  
+            'escolaridade' => 'required|string|max:100',  
         ]);
 
         // Criação do novo candidato com os dados validados

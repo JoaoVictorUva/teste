@@ -28,14 +28,14 @@ class VagaController extends Controller
 
     public function store(Request $request){
         $request->validate([
-            'selecao_id' => 'required', 
-            'cargo_id' => 'required',
-            'curso_id' => 'required',
-            'area_id' => 'required',
-            'tipo_concorrencia' => 'required',
-            'valor_inscricao' => 'required',
-            'total_vagas' => 'required',
-            'descricao' => 'required',
+            'selecao_id' => 'required|integer|exists:selecoes,selecao_id', 
+            'cargo_id' => 'required|integer',
+            'curso_id' => 'required|integer',
+            'area_id' => 'required|integer',
+            'tipo_concorrencia' => 'required|string',
+            'valor_inscricao' => 'required|integer',
+            'total_vagas' => 'required|integer',
+            'descricao' => 'required|string',
         ]);
 
         $vaga = new Vagas();
